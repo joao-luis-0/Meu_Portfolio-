@@ -1,0 +1,453 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/*------------------------------------------------------*/
+
+/* Seção de Apresentação */
+.apresentacao {
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto circular */
+    margin-bottom: 1.5rem;
+    border: 4px solid #007BFF;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); 
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2.formacao {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+p.objetivo {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+    opacity: 0.9;
+}
+
+/* Botão Saiba Mais */
+.btn-saiba-mais {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.btn-saiba-mais:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+/* Header e Nav*/
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: #007BFF;
+    color: white;
+}
+/*--------------------------------------------------------------------*/
+
+/* Main e Container*/
+.main-curriculo {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: calc(100vh - 200px); /* Ajusta para footer */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/*------------------------------------------------------------*/
+
+/* Seções Gerais */
+.intro-section, .formacao-section, .certificacoes-section, .competencias-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/*------------------------------------------------------*/
+
+/* Formação */
+.formacao-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formacao-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.data {
+    color: #007BFF;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/*----------------------------------------------------------------*/
+
+/* Certificações */
+.certificacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.certificado-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.certificado-item i {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.btn-certificado {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+}
+
+.btn-certificado:hover {
+    background: #0056b3;
+}
+
+/*---------------------------------------------------------*/
+
+/* Competências */
+.competencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.categoria {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: #333;
+}
+
+.skills-list i {
+    color: #007BFF;
+    font-size: 1.2rem;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Seção de Experiência Profissional */
+.experiencia-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.experiencia-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experiencia-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.experiencia-item h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.experiencia-item .data {
+    color: #007BFF;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/*----------------------------------------------------------*/
+
+/* Seção e Botão de Download */
+.download-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 30px; /* Bordas arredondadas */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito hover */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);/* Sombra*/
+}
+
+.btn-download:hover {
+    background-color: #0056b3; /* Escurece ao hover */
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*Contato*/
+
+.main-contato {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: calc(100vh - 200px); /* Ajusta para footer */
+}
+
+.intro-contato, .contato-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contato-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contato-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contato-item a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contato-item a:hover {
+    color: #005f8d;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .btn-download {
+        width: 80%; /* Ocupa mais espaço em mobile */
+        padding: 10px 16px;
+    }
+}
+
+.intro-section .download-section {
+    margin-top: 1.5rem; /* Adiciona espaço entre o parágrafo e o botão */
+}
+
+@media (max-width: 768px) {
+    .experiencia-list {
+        gap: 1rem;
+    }
+
+    .experiencia-item {
+        padding: 1rem;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade (adicione ou expanda) */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .certificacoes-grid,
+    .competencias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .formacao-item {
+        padding: 1rem;
+    }
+}
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2.formacao {
+        font-size: 1.2rem;
+    }
+    
+    p.objetivo {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .apresentacao {
+        padding: 2rem 0;
+    }
+}
+
+/* Animação de entrada*/
+.apresentacao {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

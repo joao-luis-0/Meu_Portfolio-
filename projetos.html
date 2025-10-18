@@ -4,20 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Luís | Portfólio</title>
+    <title>João Luís - Projetos | Portfólio</title>
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header com Navegação (comum a todas as páginas) -->
     <header class="header">
         <nav class="nav">
             <ul class="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="curriculo.html">Currículo</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Conteúdo Principal: Projetos -->
+    <main class="main-projetos">
+        <div class="container">
+            <!-- Título da Página -->
+            <section class="intro-section">
+                <h1>Projetos</h1>
+                <p>Aqui estão alguns dos meus projetos principais, demonstrando minhas habilidades em desenvolvimento de software e tecnologias relacionadas.</p>
+            </section>
+
+            <!-- Seção de Projetos -->
+            <section class="projetos-section">
+                <h2>Meus Projetos</h2>
+                <div class="projetos-grid">
+
+                    <div class="projeto-card">
+                        <h3>Projeto de Conclusão de Curso (técnico).</h3>
+                        <p>O ScanViewTCC foi um projeto de TCC que foi desenvolvido um sistema (com site, app e hardware) para monitorar e controlar o acesso a laboratórios escolares, visando segurança e gestão eficiente dos equipamentos.</p>
+                        <p>Tecnologias: HTML/CSS, JavaScript e MySQL. React Native, Firebase, Arduino e C++</p>
+                        <p>Minha Participação: Ao longo de todo o processo de desenvolvimento, fiquei responsável por toda documentação do projeto, por desenvolver a maior parte do aplicativo e parte do site web.</p>
+                        <a href="https://github.com/ScanViewTCC" target="_blank" class="btn-projeto">Ver no GitHub</a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <h3>Projeto de API: Análise do Censo de 2022 (graduação.)</h3>
+                        <p>O projeto de API, está sendo desenvolvido pela equipe KOITECH, na qual faço parte, onde estamos trbalhando com análise dos dados do censo de 2022 e disponibilizando em site pra visualização.</p>
+                        <p>Tecnologias: HTML/CSS, Google Colab, Python, Flask, Pandas, Matplotlib e Numpy</p>
+                        <p>Minha Participação: Até o momento a minha participação no projeto, foi ficar responsável por uma parte do desenvolvimento do front-end do site e no back-end, na parte de análise de dados. </p>
+                        <a href="https://github.com/koitech-API" target="_blank" class="btn-projeto">Ver no GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 João Luís. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

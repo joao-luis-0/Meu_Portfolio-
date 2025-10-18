@@ -294,6 +294,46 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
+/* Estilo para a seção de projetos */
+.projetos-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
+    gap: 2rem;
+}
+
+.projeto-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para aparência profissional */
+    text-align: justify;
+}
+
+.projeto-card h3 {
+    color: #007BFF; /* Cor azul para títulos */
+    margin-bottom: 0.5rem;
+}
+
+.btn-projeto {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-projeto:hover {
+    background-color: #0056b3;
+}
+
 /*----------------------------------------------------------*/
 
 /* Seção e Botão de Download */
@@ -388,10 +428,23 @@ h3 {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+
+    /*Fixa o footer no fim da tela */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 /* Responsividade (adicione ou expanda) */
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .projetos-grid {
+        grid-template-columns: 1fr; /* Um card por linha em mobile */
+    }
+}
+
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;

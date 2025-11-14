@@ -1,20 +1,19 @@
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*serve para que a largura e a altura total de um elemento incluam seu preenchimento (padding) e borda, em vez de calculá-los separadamente.*/
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
+    line-height: 1.6; /*espaçamento vertical entre as linhas de um texto*/
+    color: #333; /*cor do texto body*/
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /*gradient*/
+    min-height: 100vh; /*altura mínima que um elemento deve ter*/
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -27,23 +26,23 @@ body {
     padding: 4rem 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     min-height: 100vh;
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
+    width: 150px; /*largura da foto*/
+    height: 150px; /*altura da foto*/
     border-radius: 50%; /* Foto circular */
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /*distância entre a parte inferior de um elemento e o elemento seguinte.*/
     border: 4px solid #007BFF;
-    object-fit: cover;
+    object-fit: cover; /* preencher totalmente o contêiner*/
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); 
 }
 
 h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3rem; /*tamanho da fonte*/
+    font-weight: 700; /*peso da fonte*/
     color: #007BFF;
     margin-bottom: 0.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -68,10 +67,10 @@ p.objetivo {
 
 /* Botão Saiba Mais */
 .btn-saiba-mais {
-    display: inline-block;
+    display: inline-block; /*comportar como um bloco exibido em linha.*/
     background-color: #007BFF;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 500;
@@ -90,19 +89,19 @@ p.objetivo {
 .header {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: sticky; /*elemento fica no seu lugar original durante rolagem da página*/
     top: 0;
-    z-index: 100;
+    z-index: 100; 
 }
 
 .nav {
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem; /*espaço interno entre o conteúdo de um elemento e sua borda*/
 }
 
 .menu {
-    list-style: none;
+    list-style: none; /*remove marcadores do link*/
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -115,6 +114,7 @@ p.objetivo {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
+    font-size: 1.5rem;
 }
 
 .menu li a:hover,
@@ -132,13 +132,33 @@ p.objetivo {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px; /* ALTERADO: antes era 800px */
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/*------------------------------------------------------------*/
+.social-icons {
+    display: flex;          
+    justify-content: center;
+    gap: 1rem;              
+    margin: 0.5rem 0 1.5rem 0; 
+}
 
+.social-icons a {
+    display: inline-block;  
+}
+
+.icon-social {
+    width: 45px;            
+    height: 45px;           
+    cursor: pointer;        
+    transition: opacity 0.3s ease; 
+}
+
+.icon-social:hover {
+    opacity: 0.7;           
+}
+/*------------------------------------------------------------*/
 /* Seções Gerais */
 .intro-section, .formacao-section, .certificacoes-section, .competencias-section {
     margin-bottom: 3rem;
@@ -148,10 +168,11 @@ p.objetivo {
 h1, h2 {
     color: #007BFF;
     margin-bottom: 1rem;
+    font-size: 4rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,6 +183,8 @@ h3 {
     color: #333;
     margin-bottom: 0.5rem;
 }
+
+
 
 /*------------------------------------------------------*/
 
@@ -177,7 +200,7 @@ h3 {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
 }
 
 .data {
@@ -191,7 +214,7 @@ h3 {
 /* Certificações */
 .certificacoes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* ALTERADO: antes 300px */
     gap: 2rem;
 }
 
@@ -229,7 +252,7 @@ h3 {
 /* Competências */
 .competencias-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ALTERADO: antes 250px */
     gap: 2rem;
     margin-bottom: 1rem;
 }
@@ -280,7 +303,7 @@ h3 {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
 }
 
 .experiencia-item h3 {
@@ -310,12 +333,12 @@ h3 {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para aparência profissional */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
     text-align: justify;
 }
 
 .projeto-card h3 {
-    color: #007BFF; /* Cor azul para títulos */
+    color: #007BFF; 
     margin-bottom: 0.5rem;
 }
 
@@ -347,16 +370,16 @@ h3 {
     background-color: #007BFF;
     color: white;
     padding: 12px 24px;
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 30px; /* Bordas arredondadas */
+    text-decoration: none;
+    border-radius: 30px;
     font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito hover */
-    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);/* Sombra*/
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
 }
 
 .btn-download:hover {
-    background-color: #0056b3; /* Escurece ao hover */
-    transform: translateY(-2px); /* Efeito de elevação */
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -365,7 +388,7 @@ h3 {
 .main-contato {
     padding: 2rem 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: calc(100vh - 200px); /* Ajusta para footer */
+    min-height: calc(100vh - 200px);
 }
 
 .intro-contato, .contato-section {
@@ -402,13 +425,13 @@ h3 {
 /* Responsividade */
 @media (max-width: 768px) {
     .btn-download {
-        width: 80%; /* Ocupa mais espaço em mobile */
+        width: 80%; 
         padding: 10px 16px;
     }
 }
 
 .intro-section .download-section {
-    margin-top: 1.5rem; /* Adiciona espaço entre o parágrafo e o botão */
+    margin-top: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -421,27 +444,22 @@ h3 {
     }
 }
 
-
 /* Footer */
 .footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-
-    /*Fixa o footer no fim da tela */
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
 }
 
-/* Responsividade (adicione ou expanda) */
-
-/* Ajustes para responsividade */
+/* Responsividade */
 @media (max-width: 768px) {
     .projetos-grid {
-        grid-template-columns: 1fr; /* Um card por linha em mobile */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -460,7 +478,7 @@ h3 {
         padding: 1rem;
     }
 }
-/* Responsividade para mobile */
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;

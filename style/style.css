@@ -1,524 +1,481 @@
+/* Reset geral */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /*serve para que a largura e a altura total de um elemento incluam seu preenchimento (padding) e borda, em vez de calculá-los separadamente.*/
+    margin: 0; /* remove margens */
+    padding: 0; /* remove espaçamentos */
+    box-sizing: border-box; /* inclui padding/borda no tamanho total */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6; /*espaçamento vertical entre as linhas de um texto*/
-    color: #333; /*cor do texto body*/
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /*gradient*/
-    min-height: 100vh; /*altura mínima que um elemento deve ter*/
+    font-family: 'Roboto', sans-serif; /* fonte */
+    line-height: 1.6; /* altura da linha */
+    color: #333; /* cor do texto */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* fundo gradiente */
+    min-height: 100vh; /* altura mínima */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+    max-width: 1200px; /* largura máxima */
+    margin: 0 auto; /* centralizar */
+    padding: 2rem; /* espaçamento interno */
+    text-align: center; /* centralizar texto */
 }
 
 /*------------------------------------------------------*/
 
 /* Seção de Apresentação */
 .apresentacao {
-    padding: 4rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    min-height: 100vh;
+    padding: 4rem 0; /*espaçamento interno (entre o conteúdo e a borda do elemento) - padding em cima e embaixo - padding à esquerda e à direita*/
+    display: flex; /* layout flexbox */
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    min-height: 100vh; /* ocupa a tela */
 }
 
 .foto-perfil {
-    width: 150px; /*largura da foto*/
-    height: 150px; /*altura da foto*/
-    border-radius: 50%; /* Foto circular */
-    margin-bottom: 1.5rem; /*distância entre a parte inferior de um elemento e o elemento seguinte.*/
-    border: 4px solid #007BFF;
-    object-fit: cover; /* preencher totalmente o contêiner*/
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); 
+    width: 150px; /* largura */
+    height: 150px; /* altura */
+    border-radius: 50%; /* circular */
+    margin-bottom: 1.5rem; /*margem abaixo do elemento*/
+    border: 4px solid #007BFF; /* borda */
+    object-fit: cover; /* ajusta imagem */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* sombra */
 }
 
 h1 {
-    font-size: 3rem; /*tamanho da fonte*/
-    font-weight: 700; /*peso da fonte*/
-    color: #007BFF;
-    margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 3rem; /* tamanho */
+    font-weight: 700; /* peso */
+    color: #007BFF; /* cor */
+    margin-bottom: 0.5rem; /*margem abaixo do elemento*/
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* sombra */
 }
 
 h2.formacao {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #555;
-    margin-bottom: 1.5rem;
-    font-style: italic;
+    font-size: 1.5rem; /* tamanho */
+    font-weight: 400; /* peso */
+    color: #555; /* cor */
+    margin-bottom: 1.5rem; /*margem abaixo do elemento*/
+    font-style: italic; /* itálico */
 }
 
 p.objetivo {
-    font-size: 1.1rem;
-    font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    padding: 0 1rem;
-    opacity: 0.9;
+    font-size: 1.1rem; /* tamanho */
+    font-weight: 300; /* peso */
+    max-width: 600px; /* largura máxima */
+    margin: 0 auto 2rem; /* margem automática + inferior */
+    padding: 0 1rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    opacity: 0.9; /* transparência */
 }
 
 /* Botão Saiba Mais */
 .btn-saiba-mais {
-    display: inline-block; /*comportar como um bloco exibido em linha.*/
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+    display: inline-block; /*inline-block - elemento que se comporta como texto, mas aceita formatação de bloco*/
+    background-color: #007BFF; /* cor fundo */
+    color: white; /* cor texto */
+    padding: 12px 30px; /*padding em cima e embaixo - padding à esquerda e à direita*/
+    text-decoration: none; /*sem sublinhado */
+    border-radius: 30px; /*borda arredondado*/
+    font-weight: 500; /*peso da fonte*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /* animação */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /* sombra */
 }
 
 .btn-saiba-mais:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* Efeito de elevação */
+    background-color: #0056b3; /* fundo hover */
+    transform: translateY(-2px); /* sobe */
 }
 
 /*--------------------------------------------------------------------------------------------*/
 
-/* Header e Nav*/
+/* Header e Nav */
 .header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /*elemento fica no seu lugar original durante rolagem da página*/
-    top: 0;
-    z-index: 100; 
+    background-color: #fff; /* fundo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra */
+    position: sticky; /* fixa no topo ao rolar */
+    top: 0; /* posição */
+    z-index: 100; /* acima dos outros */
 }
 
 .nav {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem; /*espaço interno entre o conteúdo de um elemento e sua borda*/
+    max-width: 800px; /*largura*/
+    margin: 0 auto; /*margem em cima e embaixo - ajusta automaticamente as laterais para centralizar o elemento - centraliza o container na página */
+    padding: 1rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
 }
 
 .menu {
-    list-style: none; /*remove marcadores do link*/
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    list-style: none; /* remove marcadores */
+    display: flex; /* layout flexbox */
+    justify-content: center; /*centraliza os itens horizontalmente dentro de um contêiner*/
+    gap: 2rem; /*espaço entre os itens*/
 }
 
 .menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 1.5rem;
+    text-decoration: none; /*sem sublinhado*/
+    color: #333; /*cor texto*/
+    font-weight: 500; /*peso da fonte*/
+    padding: 0.5rem 1rem; /*padding em cima e embaixo - padding à esquerda e à direita*/
+    border-radius: 5px; /*borda arredondada*/
+    transition: background-color 0.3s; /* animação */
+    font-size: 1.5rem; /*tamanho da fonte*/
 }
 
 .menu li a:hover,
 .menu li a.active {
-    background-color: #007BFF;
-    color: white;
+    background-color: #007BFF; /* fundo */
+    color: white; /* cor texto */
 }
+
 /*--------------------------------------------------------------------*/
 
-/* Main e Container*/
+/* Main e Container */
 .main-curriculo {
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: calc(100vh - 200px); /* Ajusta para footer */
-}
-
-.container {
-    max-width: 1200px; /* ALTERADO: antes era 800px */
-    margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 0; /* padding vertical */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /*fundo */
+    min-height: calc(100vh - 200px); /* aponta espaço p/ footer */
 }
 
 .social-icons {
-    display: flex;          
-    justify-content: center;
-    gap: 1rem;              
-    margin: 0.5rem 0 1.5rem 0; 
+    display: flex; /*layout flexbox*/
+    justify-content: center; /*centraliza os itens horizontalmente dentro de um contêiner*/
+    gap: 1rem; /* espaço entre os itens - tanto horizontal quanto vertical*/
+    margin: 0.5rem 0 1.5rem 0; /* margem: cima, direita, baixo, esquerda */
 }
 
 .social-icons a {
-    display: inline-block;  
+    display: inline-block; /*inline-block - elemento que se comporta como texto, mas aceita formatação de bloco*/
 }
 
 .icon-social {
-    width: 45px;            
-    height: 45px;           
-    cursor: pointer;        
-    transition: opacity 0.3s ease; 
+    width: 45px; /*largura do icon */
+    height: 45px; /*altura do icon*/
+    cursor: pointer; /*muda o cursor para indicar clique*/
+    transition: opacity 0.3s ease; /*animação*/
 }
 
 .icon-social:hover {
-    opacity: 0.7;           
+    opacity: 0.7; /*diminui opacidade*/
 }
+
 /*------------------------------------------------------------*/
+
 /* Seções Gerais */
 .intro-section, .formacao-section, .certificacoes-section, .competencias-section {
-    margin-bottom: 3rem;
-    text-align: center;
+    margin-bottom: 3rem; /* margem inferior */
+    text-align: center; /* centralizar texto */
 }
 
 h1, h2 {
-    color: #007BFF;
-    margin-bottom: 1rem;
-    font-size: 4rem;
+    color: #007BFF; /* cor do texto*/
+    margin-bottom: 1rem; /*margem abaixo do elemento*/
+    font-size: 4rem; /*tamanho*/
 }
 
 h2 {
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    font-size: 3rem; /*tamanho */
+    display: flex; /*layout flex */
+    align-items: center; /*centraliza verticalmente os itens dentro de um contêiner*/
+    justify-content: center; /*centraliza os itens horizontalmente dentro de um contêiner*/
+    gap: 0.5rem; /*espaço entre os itens*/
 }
 
 h3 {
-    color: #333;
-    margin-bottom: 0.5rem;
+    color: #333; /*cor do texto*/
+    margin-bottom: 0.5rem; /*margem abaixo do elemento*/
 }
-
-
 
 /*------------------------------------------------------*/
 
 /* Formação */
 .formacao-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: flex; /*layout flexbox */
+    flex-direction: column; /*colunas*/
+    gap: 1.5rem; /*espaço entre os itens */
 }
 
 .formacao-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: white; /*fundo*/
+    padding: 1.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    border-radius: 10px; /* borda arredondada */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+    text-align: center; /* centraliza */
 }
 
 .data {
-    color: #007BFF;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    color: #007BFF; /*cor da finte*/
+    font-weight: bold; /*peso da fonte*/
+    margin-bottom: 0.5rem; /*margem abaixo do elemento*/
 }
 
 /*----------------------------------------------------------------*/
 
 /* Certificações */
 .certificacoes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* ALTERADO: antes 300px */
-    gap: 2rem;
+    display: grid; /* layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));/*Cria colunas que variam de 350px até ocupar o espaço disponível, ajustando a quantidade conforme o tamanho da tela.*/
+    gap: 2rem; /* espaço */
 }
 
 .certificado-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: white; /* fundo */
+    padding: 1.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    border-radius: 10px; /* borda arredondada */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra */
+    text-align: center; /* centralizar */
 }
 
 .certificado-item i {
-    font-size: 2rem;
-    color: #007BFF;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* tamanho ícone */
+    color: #007BFF; /* cor */
+    margin-bottom: 1rem; /*margem abaixo do elemento*/
 }
 
 .btn-certificado {
-    display: inline-block;
-    background: #007BFF;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-    transition: background 0.3s;
+    display: inline-block; /*inline-block - elemento que se comporta como texto, mas aceita formatação de bloco*/
+    background: #007BFF; /*fundo*/
+    color: white; /*cor do texto  */
+    padding: 0.5rem 1rem; /*padding em cima e embaixo - padding à esquerda e à direita*/
+    text-decoration: none; /*texto sem sublinhado*/
+    border-radius: 5px; /* borda arrendondada */
+    margin-top: 0.5rem; /*espaço acima do elemento*/
+    transition: background 0.3s; /*animação*/
 }
 
 .btn-certificado:hover {
-    background: #0056b3;
+    background: #0056b3; /*fundo hover*/
 }
 
 /*---------------------------------------------------------*/
 
 /* Competências */
 .competencias-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ALTERADO: antes 250px */
-    gap: 2rem;
-    margin-bottom: 1rem;
+    display: grid; /*layout grid*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*Cria colunas que variam de 300px até ocupar o espaço disponível, ajustando a quantidade conforme o tamanho da tela.*/
+    gap: 2rem; /*espaço entre os itens */
+    margin-bottom: 1rem; /*margem abaixo do elemento*/
 }
 
 .categoria {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: white; /* fundo */
+    padding: 1.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    border-radius: 10px; /* borda */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra */
+    text-align: center; /* centralizar*/
 }
 
 .skills-list {
-    list-style: none;
-    margin-top: 1rem;
+    list-style: none; /* remove marcadores */
+    margin-top: 1rem; /*espaço acima do elemento*/
 }
 
 .skills-list li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    color: #333;
+    display: flex; /* flex */
+    align-items: center; /*centraliza verticalmente os itens dentro de um contêiner*/
+    justify-content: center; /*centraliza os itens horizontalmente dentro de um contêiner*/
+    gap: 0.5rem; /*espaço*/
+    padding: 0.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    color: #333; /*cor*/
 }
 
 .skills-list i {
-    color: #007BFF;
-    font-size: 1.2rem;
+    color: #007BFF; /*cor da fonte*/
+    font-size: 1.2rem; /*tamanho da fonte*/
 }
 
 /*--------------------------------------------------------------------------*/
 
-/* Seção de Experiência Profissional */
+/* Experiência */
 .experiencia-section {
-    margin-bottom: 3rem;
-    text-align: center;
+    margin-bottom: 3rem; /*margem abaixo do elemento*/
+    text-align: center; /*centralizar*/
 }
 
 .experiencia-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: flex; /* layout flex */
+    flex-direction: column; /*colunas*/
+    gap: 1.5rem; /*espaço entre os itens*/
 }
 
 .experiencia-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: white; /*fundo*/
+    padding: 1.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    border-radius: 10px; /*borda*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+    text-align: center; /*centralizar*/
 }
 
 .experiencia-item h3 {
-    color: #333;
-    margin-bottom: 0.5rem;
+    color: #333; /*cor do texto*/
+    margin-bottom: 0.5rem; /*margem abaixo do elemento*/
 }
 
 .experiencia-item .data {
-    color: #007BFF;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    color: #007BFF; /*cor do texto*/
+    font-weight: bold; /*peso da fonte - grossa ou fina*/
+    margin-bottom: 0.5rem; /*margem abaixo do elemento*/
 }
 
-/* Estilo para a seção de projetos */
+/* Projetos */
 .projetos-section {
-    margin-bottom: 3rem;
-    text-align: center;
+    margin-bottom: 3rem; /*espaço pequeno abaixo do elemento*/
+    text-align: center; /*centralizar*/
 }
 
 .projetos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
-    gap: 2rem;
+    display: grid; /*usa layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Cria colunas que variam de 300px até ocupar o espaço disponível, ajustando a quantidade conforme o tamanho da tela.*/
+    gap: 2rem; /*espaço entre os itens*/
 }
 
 .projeto-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    text-align: justify;
+    background: white; /*cor de fundo*/
+    padding: 1.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    border-radius: 10px; /*borda arredondada*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+    text-align: justify; /*alinhamento do texto*/
 }
 
 .projeto-card h3 {
-    color: #007BFF; 
-    margin-bottom: 0.5rem;
+    color: #007BFF; /* cor do título */
+    margin-bottom: 0.5rem; /*espaço pequeno abaixo do elemento*/
 }
 
 .btn-projeto {
-    display: inline-block;
-    background-color: #007BFF;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
+    display: inline-block; /*inline-block - elemento que se comporta como texto, mas aceita formatação de bloco*/
+    background-color: #007BFF; /*cor de fundo*/
+    color: white; /*cor do texto*/
+    padding: 0.8rem 1.5rem; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    text-decoration: none; /* linnk sem sublinhado*/
+    border-radius: 5px; /*borda arrendondada*/
+    margin-top: 1rem; /*espaço acima do elemento*/
+    transition: background-color 0.3s; /*animação*/
 }
 
 .btn-projeto:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /*hover do botão*/
 }
 
 /*----------------------------------------------------------*/
 
-/* Seção e Botão de Download */
+/* Download */
 .download-section {
-    margin: 2rem 0;
-    text-align: center;
+    margin: 2rem 0; /*margem vertical - espaçamento externo (entre o elemento e outros elementos)*/
+    text-align: center; /*centralizar*/
 }
 
 .btn-download {
-    display: inline-block;
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+    display: inline-block; /* inline-block - elemento que se comporta como texto, mas aceita formatação de bloco*/
+    background-color: #007BFF; /*cor de fundo*/
+    color: white; /*cor do texto*/
+    padding: 12px 24px; /*espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    text-decoration: none; /*link sem sublinhado*/
+    border-radius: 30px; /*borda arredondada*/
+    font-weight: 500; /*peso da fonte*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /*animação*/
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /*sombra*/
 }
 
 .btn-download:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: #0056b3; /*fundo hover*/
+    transform: translateY(-2px); /*leve subida ao passar*/
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-/*Contato*/
-
-.main-contato {
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: calc(100vh - 200px);
+/* Footer */
+.footer {
+    background: #333; /*fundo*/
+    color: white; /* texto */
+    text-align: center; /*centralizar*/
+    padding: 1rem; /*padding - espaçamento interno (entre o conteúdo e a borda do elemento)*/
+    position: fixed; /*fixo*/
+    bottom: 0; /* fica na parte inferior embaixo */
+    left: 0; /*esquerda*/
+    width: 100%; /*largura total do footer*/
 }
 
-.intro-contato, .contato-section {
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.contato-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contato-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.contato-item a {
-    color: #0077b6;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.contato-item a:hover {
-    color: #005f8d;
-    text-decoration: underline;
-}
+/*----------------------------------------------*/
 
 /* Responsividade */
 @media (max-width: 768px) {
     .btn-download {
         width: 80%; 
-        padding: 10px 16px;
+        padding: 10px 16px; 
     }
 }
 
 .intro-section .download-section {
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; 
 }
 
 @media (max-width: 768px) {
     .experiencia-list {
-        gap: 1rem;
+        gap: 1rem; 
     }
 
     .experiencia-item {
-        padding: 1rem;
+        padding: 1rem; 
     }
 }
 
-/* Footer */
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
     .projetos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 }
 
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1rem; 
     }
     
     .certificacoes-grid,
     .competencias-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
     
     .formacao-item {
-        padding: 1rem;
+        padding: 1rem; 
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 1rem; 
     }
     
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; 
     }
     
     h2.formacao {
-        font-size: 1.2rem;
+        font-size: 1.2rem; 
     }
     
     p.objetivo {
-        font-size: 1rem;
-        padding: 0 0.5rem;
+        font-size: 1rem; 
+        padding: 0 0.5rem; 
     }
     
     .foto-perfil {
-        width: 120px;
-        height: 120px;
+        width: 120px; 
+        height: 120px; 
     }
     
     .apresentacao {
-        padding: 2rem 0;
+        padding: 2rem 0; 
     }
 }
 
-/* Animação de entrada*/
+/* Animação */
 .apresentacao {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out; 
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(20px);
+        opacity: 0; 
+        transform: translateY(20px); 
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
